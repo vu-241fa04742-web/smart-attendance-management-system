@@ -10,7 +10,14 @@ const { User, Subject, Attendance, initDb } = require("./db");
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-app.use(cors({ origin: ["http://localhost:5173", "http://localhost:5174"] }));
+app.use(cors({
+  origin: [
+    "http://localhost:5173",
+    "http://localhost:5174",
+    "https://smart-attendance-management-system-woad.vercel.app"
+  ]
+}));
+
 app.use(express.json());
 
 function safeUser(user) {

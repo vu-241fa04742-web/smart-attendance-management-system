@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useState } from "react";
 
-const API = import.meta.env.VITE_API_URL || "http://localhost:5000/api";
+const API = `${import.meta.env.VITE_API_URL}/api`;
 const today = new Date().toISOString().slice(0, 10);
 
 async function request(path, options = {}) {
